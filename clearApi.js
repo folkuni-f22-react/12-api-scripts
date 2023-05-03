@@ -8,7 +8,7 @@ async function deleteAll() {
 	let ids = await getProductIds()
 
 	ids.forEach(async id => {
-		const data = { shopid: shopId, id, action: 'delete-product' }
+		const data = { shopid: shopId, productid: id, action: 'delete-product' }
 		const options = {
 			method: 'DELETE',
 			headers: { 'Content-Type': 'application/json' },
